@@ -28,13 +28,17 @@
             <string>chunk_x = 512
 chunk_y = 512
 
+terrain = choose(obj_grass,obj_sand)
+
 //make grass
 
 a = 0
 b = 0
 repeat(chunk_y / 32){
 repeat(chunk_x / 32){
-instance_create((room_width-chunk_x+a*32)-64,(room_height-chunk_y+b*32)-64,obj_grass)
+if place_free(x-chunk_x/2+a*32,y-chunk_y/2+b*32){
+instance_create(x-chunk_x/2+a*32,y-chunk_y/2+b*32,terrain)
+}
 a += 1
 }
 a = 0
@@ -66,7 +70,9 @@ b += 1
             <kind>1</kind>
             <string>///player not in current chunk
 
-if !point_in_rectangle(obj_player.x,obj_player.y,room_width/2-chunk_x/2,room_height/2-chunk_y/2,room_width/2+chunk_x/2,room_height/2+chunk_y/2){
+if !point_in_rectangle(obj_player.x,obj_player.y,
+x-chunk_x/2,y-chunk_y/2,
+x+chunk_x/2,y+chunk_x/2){
 instance_create(obj_player.x,obj_player.y,obj_chunk)
 instance_destroy()
 }
@@ -92,7 +98,7 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_rectangle(room_width/2-chunk_x/2,room_height/2-chunk_y/2,room_width/2+chunk_x/2,room_height/2+chunk_y/2,true)
+            <string>draw_rectangle(x-chunk_x/2,y-chunk_y/2,x+chunk_x/2,y+chunk_y/2,true)
 </string>
           </argument>
         </arguments>
