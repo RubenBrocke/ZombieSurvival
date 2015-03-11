@@ -28,6 +28,19 @@
             <string>chunk_x = 512
 chunk_y = 512
 
+//make grass
+
+a = 0
+b = 0
+repeat(chunk_y / 32){
+repeat(chunk_x / 32){
+instance_create((room_width-chunk_x+a*32)-64,(room_height-chunk_y+b*32)-64,obj_grass)
+a += 1
+}
+a = 0
+b += 1
+}
+
 
 </string>
           </argument>

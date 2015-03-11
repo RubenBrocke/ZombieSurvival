@@ -14,9 +14,14 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_chunk</object>
+    <object>objects\obj_grass</object>
   </objects>
   <rooms name="rooms">
+<<<<<<< Updated upstream
     <room>rooms\rm_test</room>
+=======
+    <room>rooms\room0</room>
+>>>>>>> Stashed changes
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
