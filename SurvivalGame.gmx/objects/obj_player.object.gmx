@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>shoot = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -27,12 +50,12 @@
             <kind>1</kind>
             <string>///Movement
 //Set keys
-key_up = keyboard_check(vk_up)
-key_down = keyboard_check(vk_down)
-key_right = keyboard_check(vk_right)
-key_left = keyboard_check(vk_left)
+key_up = keyboard_check(vk_up) or keyboard_check(ord('W'))
+key_down = keyboard_check(vk_down) or keyboard_check(ord('S'))
+key_right = keyboard_check(vk_right) or keyboard_check(ord('D'))
+key_left = keyboard_check(vk_left) or keyboard_check(ord('A'))
 
-//Bewegen
+//Actual movement
 if key_up {
     y -= 4
     }
@@ -51,6 +74,61 @@ if key_right {
 
 //Look at mouse
 image_angle = point_direction(x, y, mouse_x, mouse_y);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Shooting
+if shoot &lt;= 10
+shoot +=1
+
+if shoot &gt;= 10 and mouse_check_button(mb_left){
+bullet = instance_create(x,y,obj_bullet)
+with(bullet){
+direction = point_direction(x,y,mouse_x,mouse_y)
+image_angle = other.image_angle
+speed = 15
+}
+shoot = 0
+} 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Particles
+effect_create_below(ef_smoke,x,y,.75,c_black)
 </string>
           </argument>
         </arguments>
