@@ -19,13 +19,16 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>obj_chunk</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>chunk_x = 512
+            <string>x=(x div 32)*32;
+y=(y div 32)*32;
+
+chunk_x = 512
 chunk_y = 512
 
 terrain = choose(obj_grass,obj_sand)
