@@ -37,10 +37,19 @@ terrain = choose(obj_grass,obj_sand)
 
 a = 0
 b = 0
-repeat(chunk_y / 32){
-repeat(chunk_x / 32){
-if place_free(x-chunk_x/2+a*32,y-chunk_y/2+b*32){
-instance_create(x-chunk_x/2+a*32,y-chunk_y/2+b*32,terrain)
+repeat((chunk_y / 32)+12){
+repeat((chunk_x / 32)+12){
+if place_free((x-chunk_x/2+a*32)-192,(y-chunk_y/2+b*32)-192){
+tile = instance_create((x-chunk_x/2+a*32)-192,(y-chunk_y/2+b*32)-192,terrain)
+if random(25) &lt; 1 and tile.object_index = obj_grass{ 
+instance_create(tile.x,tile.y,obj_tree)
+with(tile){
+if !place_free(tile.x,tile.y){
+instance_destroy()
+}
+}
+
+}
 }
 a += 1
 }

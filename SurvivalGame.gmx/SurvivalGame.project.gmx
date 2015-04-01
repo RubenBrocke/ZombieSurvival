@@ -9,14 +9,18 @@
     <sprite>sprites\spr_grass</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_sand</sprite>
+    <sprite>sprites\spr_tree</sprite>
+    <sprite>sprites\spr_zombie</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_chunk</object>
     <object>objects\obj_grass</object>
     <object>objects\obj_sand</object>
+    <object>objects\obj_tree</object>
+    <object>objects\obj_debug</object>
+    <object>objects\obj_createworld</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
