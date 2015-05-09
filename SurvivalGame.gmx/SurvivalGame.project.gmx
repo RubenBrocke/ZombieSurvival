@@ -8,22 +8,30 @@
   <sprites name="sprites">
     <sprite>sprites\spr_grass</sprite>
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_sand</sprite>
     <sprite>sprites\spr_tree</sprite>
     <sprite>sprites\spr_zombie</sprite>
+    <sprite>sprites\spr_sand</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_tileset</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_grass</object>
-    <object>objects\obj_sand</object>
     <object>objects\obj_tree</object>
     <object>objects\obj_debug</object>
-    <object>objects\obj_createworld</object>
+    <object>objects\obj_grass</object>
+    <object>objects\obj_sand</object>
+    <object>objects\obj_maps</object>
+    <object>objects\obj_daynight</object>
+    <object>objects\obj_spawnzombie</object>
+    <object>objects\obj_zombie</object>
+    <object>objects\obj_bullet</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
+    <room>rooms\rm_1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

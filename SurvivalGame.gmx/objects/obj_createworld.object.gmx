@@ -29,24 +29,29 @@
 x = room_width/2
 y = room_height/2
 
-world_size = 1024*4
+world_size = 1024*8
 
 start_x = room_width/2-(world_size / 2)
 start_y = room_height/2-(world_size / 2)
+
+object = choose(obj_grass,obj_sand)
 
 a = 0
 b = 0
 
 repeat(world_size/32){
 b += 1
+if random(6) &lt; 1 { object = choose(obj_grass,obj_sand) }
 a = 0
 repeat(world_size/32){
-instance_create(start_x+a*32,start_y+b*32,obj_grass)
+instance_create(start_x+a*32,start_y+b*32,object)
 a += 1
-
+if random(12) &lt; 1 { object = choose(obj_grass,obj_sand) }
 
 }
 }
+
+instance_destroy()
 </string>
           </argument>
         </arguments>
