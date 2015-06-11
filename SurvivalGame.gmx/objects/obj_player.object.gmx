@@ -53,6 +53,9 @@ hp = 20
             <string>///reload clip
 
 clip += 5
+with(obj_clip){
+image_index = 0
+}
 </string>
           </argument>
         </arguments>

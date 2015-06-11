@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0
-x = -64
-y = -64
 </string>
           </argument>
         </arguments>
@@ -52,7 +50,6 @@ y = -64
             <kind>1</kind>
             <string>x = sprite_width + 15;
 y = view_hview - sprite_height + 15;
-
 </string>
           </argument>
         </arguments>
