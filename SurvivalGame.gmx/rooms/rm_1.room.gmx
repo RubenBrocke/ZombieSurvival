@@ -55,6 +55,7 @@
     <instance objName="obj_spawnzombie" x="32" y="0" name="inst_F5265D2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass" x="0" y="0" name="inst_09BF364F" locked="0" code="" scaleX="64" scaleY="64" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="128" y="64" name="inst_62CF741E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_clip" x="11584" y="4672" name="inst_E86FB701" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

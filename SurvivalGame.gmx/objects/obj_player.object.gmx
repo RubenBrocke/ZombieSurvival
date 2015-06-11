@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 20
+            <string>// set vars
+clip = 5
+hp = 20
 </string>
           </argument>
         </arguments>
@@ -55,7 +57,7 @@ key_down = keyboard_check(vk_down)
 key_right = keyboard_check(vk_right)
 key_left = keyboard_check(vk_left)
 
-//Bewegen
+//Movement
 if key_up {
     y -= 4
     }
@@ -145,7 +147,7 @@ instance_activate_object(obj_player)
 key_shoot = mouse_check_button_pressed(mb_left)
 
 
-if key_shoot{
+if key_shoot and clip &gt;=1{
 spawn_x = x + lengthdir_x(16,image_angle)
 spawn_y = y + lengthdir_y(16,image_angle)
 
@@ -153,6 +155,17 @@ bullet = instance_create(spawn_x,spawn_y,obj_bullet)
 with(bullet){
 speed = 10
 direction = other.image_angle
+}
+clip -= 1
+with(obj_clip){
+switch(obj_player.clip){
+case 5: image_index = 0 break
+case 4: image_index = 1 break
+case 3: image_index = 2 break
+case 2: image_index = 3 break
+case 1: image_index = 4 break
+case 0: image_index = 5 break
+}
 }
 }
 </string>

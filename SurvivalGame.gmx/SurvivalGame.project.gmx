@@ -12,6 +12,7 @@
     <sprite>sprites\spr_zombie</sprite>
     <sprite>sprites\spr_sand</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_clip</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tileset</background>
@@ -27,6 +28,7 @@
     <object>objects\obj_spawnzombie</object>
     <object>objects\obj_zombie</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_clip</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
