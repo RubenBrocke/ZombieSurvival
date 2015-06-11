@@ -50,9 +50,9 @@ day = true
           <argument>
             <kind>1</kind>
             <string>if day = true{
-time += 0.0001
+time += 0.0005
 }else{
-time -= 0.0001
+time -= 0.0005
 }
 
 if time &gt;= 0.75{

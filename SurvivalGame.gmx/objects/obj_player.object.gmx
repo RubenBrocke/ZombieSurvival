@@ -33,6 +33,31 @@ hp = 20
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///reload clip
+
+clip += 5
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -52,10 +77,10 @@ hp = 20
             <kind>1</kind>
             <string>///Movement
 //Set keys
-key_up = keyboard_check(vk_up)
-key_down = keyboard_check(vk_down)
-key_right = keyboard_check(vk_right)
-key_left = keyboard_check(vk_left)
+key_up = keyboard_check(vk_up) or keyboard_check(ord("W"))
+key_down = keyboard_check(vk_down) or keyboard_check(ord("S"))
+key_right = keyboard_check(vk_right) or keyboard_check(ord("D"))
+key_left = keyboard_check(vk_left) or keyboard_check(ord("A"))
 
 //Movement
 if key_up {
@@ -167,6 +192,10 @@ case 1: image_index = 4 break
 case 0: image_index = 5 break
 }
 }
+}
+
+if clip &lt;= 0 and keyboard_check_pressed(ord("R")){
+alarm[0] = 30
 }
 </string>
           </argument>

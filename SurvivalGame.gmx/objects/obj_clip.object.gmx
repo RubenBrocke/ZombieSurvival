@@ -50,9 +50,9 @@ y = -64
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = view_xview[0] + view_wview[0]  - sprite_width - 15;
-y = view_yview[0] + view_hview[0]  - sprite_height - 15;
-draw_self()
+            <string>x = sprite_width + 15;
+y = view_hview - sprite_height + 15;
+
 </string>
           </argument>
         </arguments>
