@@ -49,13 +49,13 @@
           <argument>
             <kind>1</kind>
             <string>if obj_daynight.time &gt; 0.4 and instance_number(obj_zombie)&lt; 10{
-spawn_x = obj_player.x + lengthdir_x(128,random(380))
-spawn_y = obj_player.y + lengthdir_y(128,random(360))
+spawn_x = obj_player.x + lengthdir_x(256,random(380))
+spawn_y = obj_player.y + lengthdir_y(256,random(360))
 
 instance_create(spawn_x,spawn_y,obj_zombie)
 }
 
-alarm[0] = 300
+alarm[0] = 300 - (obj_daynight.day_number * 10)
 </string>
           </argument>
         </arguments>

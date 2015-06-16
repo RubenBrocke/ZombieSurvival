@@ -23,12 +23,10 @@
     <object>objects\obj_tree</object>
     <object>objects\obj_debug</object>
     <object>objects\obj_grass</object>
-    <object>objects\obj_maps</object>
     <object>objects\obj_daynight</object>
     <object>objects\obj_spawnzombie</object>
     <object>objects\obj_zombie</object>
     <object>objects\obj_bullet</object>
-    <object>objects\obj_clip</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>

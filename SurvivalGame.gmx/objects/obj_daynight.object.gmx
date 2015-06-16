@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>time = 0
 day = true
+
+day_number = 0
 </string>
           </argument>
         </arguments>
@@ -59,7 +61,10 @@ if time &gt;= 0.75{
 day = false
 }else if time &lt;= 0{
 day = true
+day_number += 1
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -88,6 +93,8 @@ draw_set_alpha(1)
 draw_set_color(c_white)
 draw_text(0,0,string(time))
 draw_set_color(c_black)
+
+draw_text(32,48,"Day: " + string(day_number))
 </string>
           </argument>
         </arguments>
