@@ -21,7 +21,6 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_tree</object>
-    <object>objects\obj_debug</object>
     <object>objects\obj_grass</object>
     <object>objects\obj_daynight</object>
     <object>objects\obj_spawnzombie</object>

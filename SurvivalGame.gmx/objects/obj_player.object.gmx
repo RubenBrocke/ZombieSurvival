@@ -220,15 +220,15 @@ game_restart()
           <argument>
             <kind>1</kind>
             <string>switch(clip){
-case 5: draw_sprite(spr_clip,0,32,32) break;
-case 4: draw_sprite(spr_clip,1,32,32) break;
-case 3: draw_sprite(spr_clip,2,32,32) break;
-case 2: draw_sprite(spr_clip,3,32,32) break;
-case 1: draw_sprite(spr_clip,4,32,32) break;
-case 0: draw_sprite(spr_clip,5,32,32) break;
+case 5: draw_sprite(spr_clip,0,32,432) break;
+case 4: draw_sprite(spr_clip,1,32,432) break;
+case 3: draw_sprite(spr_clip,2,32,432) break;
+case 2: draw_sprite(spr_clip,3,32,432) break;
+case 1: draw_sprite(spr_clip,4,32,432) break;
+case 0: draw_sprite(spr_clip,5,32,432) break;
 }
 
-draw_text(48,0,string(hp))
+draw_healthbar(32,480-16,640-32,480-32,100/10*hp,c_dkgray,c_red,c_green,0,false,false)
 </string>
           </argument>
         </arguments>

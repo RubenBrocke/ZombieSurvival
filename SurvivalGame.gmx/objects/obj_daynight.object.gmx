@@ -90,11 +90,15 @@ day_number += 1
             <string>draw_set_alpha(time)
 draw_rectangle_colour(0,0,1024,768,c_black,c_black,c_black,c_black,false)
 draw_set_alpha(1)
-draw_set_color(c_white)
-draw_text(0,0,string(time))
-draw_set_color(c_black)
 
-draw_text(32,48,"Day: " + string(day_number))
+
+draw_text(0,0,"Day: " + string(day_number))
+
+if time &gt;= 0.35{
+draw_text(584,0,"Night")
+}else if time &lt;= 0.35{
+draw_text(584,0,"Day")
+}
 </string>
           </argument>
         </arguments>

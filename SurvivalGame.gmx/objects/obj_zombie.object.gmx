@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>hp = 10 + obj_daynight.day_number
+
+image_speed = 0.5
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mp_linear_step_object(obj_player.x,obj_player.y,hp / 2,obj_tree)
+            <string>mp_linear_step_object(obj_player.x,obj_player.y,max(4,hp / 2.5),obj_tree)
 
 
 
